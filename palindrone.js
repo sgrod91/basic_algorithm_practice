@@ -1,5 +1,12 @@
 function palindrome(str) {
-  var str = str.replace(/ /gi, "");
+  str = str.replace(/ /gi, "");
+  str = str.replace(/_/gi, "");
+  str = str.replace(/-/gi, "");
+  str = str.replace(/\(/gi, "");
+  str = str.replace(/\)/gi, "");
+  str = str.replace(/,/gi, "");
+  str = str.replace(/\./gi, "");
+  str = str.toLowerCase();
   var newString = "";
   console.log(str);
   for (var i = str.length - 1; i >= 0; i--) {
@@ -12,4 +19,4 @@ function palindrome(str) {
   }
 }
 
-console.log(palindrome("not a palindrome"));
+console.log(palindrome("0_0 (: /-\ :) 0-0"));
