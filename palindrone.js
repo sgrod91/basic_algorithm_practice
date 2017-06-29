@@ -1,11 +1,15 @@
 function palindrome(str) {
-  var filteredStr = "";
-  for (var i = 0, i <= str.length, i++) {
-    filteredStr = str[i];
+  var str = str.replace(/ /gi, "");
+  var newString = "";
+  console.log(str);
+  for (var i = str.length - 1; i >= 0; i--) {
+     newString += str[i];
   }
-  return true;
+  if (newString === str) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-
-
-palindrome("eye");
+console.log(palindrome("not a palindrome"));
