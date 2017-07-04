@@ -1,10 +1,12 @@
 function findLongestWord(str) {
-  var splits = str.split(' ');
-  console.log(splits);
-  for (var i = 0; i < splits.length; i++) {
-    return splits[i].length;
-
+  var arrayOfStrings = str.split(' ');
+  var longestString = "";
+  for (var i = 0; i < arrayOfStrings.length; i++) {
+    if(longestString.length < arrayOfStrings[i].length) {
+      longestString = arrayOfStrings[i];
+    }
   }
+  str = longestString;
   return str.length;
 }
 
