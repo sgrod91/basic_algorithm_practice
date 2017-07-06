@@ -1,13 +1,18 @@
 function findLongestWord(str) {
   var arrayOfStrings = str.split(' ');
   var longestString = "";
+  var longestStrings = [];
   for (var i = 0; i < arrayOfStrings.length; i++) {
-    if(longestString.length < arrayOfStrings[i].length) {
+    if(longestString.length <= arrayOfStrings[i].length) {
+      if(longestString.length < arrayOfStrings[i].length) {
+        longestStrings = [];
+      }
+      longestStrings.push(arrayOfStrings[i]);
       longestString = arrayOfStrings[i];
     }
   }
-  str = longestString;
-  return str.length;
+  str = longestStrings;
+  return str;
 }
 
-findLongestWord("Mary had a little lamb");
+findLongestWord("Toby said do the problem from scratch");
