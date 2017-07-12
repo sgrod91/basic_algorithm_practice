@@ -13,4 +13,4 @@ function largestOfFour(arr) {
   return arr;
 }
 
-console.log(largestOfFour(appen[[1, 2], [8, 9]]));
+console.log(largestOfFour(appen[[1, 2], [3, 4]]));
