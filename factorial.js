@@ -9,4 +9,4 @@ function factorialize(num) {
     return result;
   }
 }
-console.log(factorialize(5));
+console.log(factorialize(10));
